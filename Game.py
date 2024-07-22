@@ -1,5 +1,5 @@
 import pygame
-
+from Camera import *
 pygame.init()
 
 #Making Screen
@@ -168,13 +168,15 @@ def redrawGameWindow():
     
     pygame.display.update()
     
+########################Load Player and Enemy#############################
+
 man = player(5, 500, 32, 32)
 enemy1 = enemy(100, 500, 32, 32, 450)
-
 font = pygame.font.SysFont("comicsans", 20, True)
 shootLoop = 0
 bullets = []
-#mainLoop
+
+########################mainLoop##########################
 run = True
 while run:
     clock.tick(24)
